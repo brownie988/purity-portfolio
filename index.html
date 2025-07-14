@@ -23,6 +23,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+  
   <!-- 🔘 Add Button HERE -->
 <button id="toggle-theme">🌙 Dark Mode</button>
 
@@ -88,6 +89,28 @@
   <footer>
     <p>© 2025 Purity. All rights reserved.</p>
   </footer>
+  
+ <!-- ✅ JavaScript: Fade-In + Dark Mode -->
+  <script>
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
 
+    // Dark Mode Toggle
+    const toggleBtn = document.getElementById("toggle-theme");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleBtn.textContent = document.body.classList.contains("dark-mode") 
+        ? "☀️ Light Mode" 
+        : "🌙 Dark Mode";
+    });
+  </script>
 </body>
 </html>
