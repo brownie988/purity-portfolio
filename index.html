@@ -71,13 +71,22 @@
     <p>I’m a passionate student who loves combining storytelling, dance, and animation. My dream is to use creativity to inspire and entertain!</p>
   </section>
 
-  <!-- ✅ Contact Section -->
-  <section id="contact" class="fade-in">
-    <h2>Contact Me</h2>
-    <p>Email: yourname@example.com</p>
-    <p>Instagram: @yourusername</p>
-    <a href="Purity-CV.pdf" download class="cv-button">Download My CV</a>
-  </section>
+  <!-- ✅ Contact Section with Form -->
+<section id="contact" class="fade-in">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="_replyto" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
   <!-- ✅ Footer -->
   <footer>
