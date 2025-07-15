@@ -5,17 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Purity's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Optional: Smooth Scroll -->
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- ✅ Navigation Bar -->
+  <!-- Toggle Theme Button -->
+  <button id="toggle-theme">🌙 Dark Mode</button>
+
+  <!-- Navigation Bar -->
   <nav>
     <ul>
       <li><a href="#home">Home</a></li>
@@ -25,28 +21,25 @@
     </ul>
   </nav>
 
-  <!-- ✅ 🌙 Dark Mode Toggle Button -->
-  <button id="toggle-theme">🌙 Dark Mode</button>
-
-  <!-- ✅ Home Section -->
-  <section id="home" class="fade-in">
-    <h1>Welcome to My Creative World 🌟</h1>
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to My Creative World ✩</h1>
     <p>I’m Purity, an aspiring animator and web creator. Explore my work below!</p>
   </section>
 
-  <!-- ✅ Projects Section -->
-  <section id="projects" class="fade-in">
+  <!-- Projects Section -->
+  <section id="projects">
     <h2>My Projects</h2>
 
     <div class="card-container">
       <div class="project-card">
-        <img src="project 1.png" alt="Project 1">
+        <img src="img/project1.png" alt="Project 1">
         <h3>Project 1</h3>
         <p>A fun project I worked on using HTML and CSS!</p>
       </div>
-      
+
       <div class="project-card">
-        <img src="project 2.png" alt="Project 2">
+        <img src="img/project2.png" alt="Project 2">
         <h3>Project 2</h3>
         <p>Another amazing creation that helped me learn more!</p>
       </div>
@@ -65,42 +58,42 @@
     </div>
   </section>
 
-  <!-- ✅ About Section -->
-  <section id="about" class="fade-in">
+  <!-- About Section -->
+  <section id="about">
     <h2>About Me</h2>
     <p>I’m a passionate student who loves combining storytelling, dance, and animation. My dream is to use creativity to inspire and entertain!</p>
   </section>
 
-  <!-- ✅ Contact Section with Form -->
-<section id="contact" class="fade-in">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+  <!-- Contact Section with Form -->
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="_replyto" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="_replyto" required>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-  <!-- ✅ Footer -->
+  <!-- Footer -->
   <footer>
     <p>© 2025 Purity. All rights reserved.</p>
   </footer>
 
-  <!-- ✅ JavaScript: Dark Mode Toggle + Fade-in Effect -->
+  <!-- JavaScript for Toggle Theme -->
   <script>
-    // Dark Mode Toggle
-    const toggleBtn = document.getElementById("toggle-theme");
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      toggleBtn.textContent = document.body.classList.contains("dark-mode")
-        ? "☀️ L
-
-  
-
+    const toggleBtn = document.getElementById('toggle-theme');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent =
+        document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
+</body>
+</html>
